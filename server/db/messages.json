@@ -1,0 +1,20 @@
+{
+  "messages": [
+    {
+      "Id": "RkrQE04P",
+      "createdAt": "2021-04-09T11:06:54.894Z",
+      "userId": "CMgWhsB1",
+      "messageText": "Otpravim path",
+      "senderName": "Vikont",
+      "path": "/1"
+    },
+    {
+      "Id": "DQIajWfT",
+      "createdAt": "2021-04-09T19:28:31.445Z",
+      "userId": "tSAS",
+      "messageText": "ffff",
+      "senderName": "Viki",
+      "path": "/meeting"
+    }
+  ]
+}
