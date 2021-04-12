@@ -6,12 +6,14 @@ const db = low(adapter);
 
 module.exports = (io, socket) => {
   // запрос на получение сообщений
-  const get = ({path}) => {
+  const get = ({ path }) => {
     let messages = [];
     // получаем сообщения из БД  и фильтруем их по комнатам
-    db.get("messages").value().forEach(element => {
-      if(element.path == path) messages.push(element);
-       });
+    db.get("messages")
+      .value()
+      .forEach((element) => {
+        if (element.path == path) messages.push(element);
+      });
     // передаем сообщения пользователям, находящимся в комнате
     io.in(socket.roomId).emit("messages", messages);
   };
@@ -26,7 +28,7 @@ module.exports = (io, socket) => {
         ...message,
       })
       .write();
-    get({path :message.path});
+    get({ path: message.path });
   };
 
   // регистрируем обработчики

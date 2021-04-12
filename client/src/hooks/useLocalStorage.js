@@ -8,7 +8,8 @@ export const useLocalStorage = (key, initialValue) => {
 
   useEffect(() => {
     let item = JSON.stringify(value)
-    // определение имени как unknown  в случае если пользователь заходит в превый раз по ссылке на комнату
+    /* определение имени как unknown  в случае если пользователь 
+    заходит в превый раз по ссылке на комнату до того момента пока он не введет свое*/
     if (value === undefined) item = JSON.stringify("unknown");
     window.localStorage.setItem(key, item)
     // eslint-disable-next-line

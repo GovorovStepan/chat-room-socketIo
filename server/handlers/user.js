@@ -1,21 +1,10 @@
 // имитация бд
-const users = {
-  1: { username: "Max", online: false, roomId: "meeting" },
-  2: { username: "Yana", online: false, roomId: "disputes" },
-};
+const users = {};
 
 module.exports = (io, socket) => {
   // запрос на получение пользователей
   const get = () => {
-    let send = {};
-    let i = 0;
-    Object.keys(users).forEach(function (key) {
-      if (this[key].roomId == socket.roomId) {
-        i++;
-        send[`${i}`] = this[key] ;
-      }
-    }, users);
-    io.in(socket.roomId).emit("users", send);
+    io.in(socket.roomId).emit("users", users);
   };
 
   //  добавление пользователя
@@ -25,9 +14,10 @@ module.exports = (io, socket) => {
       // если не имеется, добавляем его в БД
       users[userId] = { username, online: true, roomId: socket.roomId };
     } else {
-      // если имеется, меняем  статус на онлайн  и комнату к которой подключен 
+      // если имеется, меняем  статус на онлайн  и комнату к которой подключен
+      users[userId].username = username;
       users[userId].online = true;
-      users[userId].roomId  = socket.roomId ;
+      users[userId].roomId = socket.roomId;
     }
     get();
   };

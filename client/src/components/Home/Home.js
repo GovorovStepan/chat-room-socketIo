@@ -6,8 +6,7 @@ import { Form, Button } from "react-bootstrap";
 
 export function Home() {
   // создаем и записываем в локальное хранилище имя пользователя или извлекаем его из хранилища
-  const [username, setUsername] = useLocalStorage("username", "Peter");
-  // локальное состояние для комнаты
+  const [username, setUsername] = useLocalStorage("username", "Peter")
   const [roomId, setRoomId] = useState("meeting");
   const linkRef = useRef(null);
 
@@ -25,7 +24,6 @@ export function Home() {
     e.preventDefault();
     linkRef.current.click();
   };
-  console.log(document.location.pathname);
 
   const trimmed = username.trim();
 

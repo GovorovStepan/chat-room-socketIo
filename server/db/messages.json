@@ -1,19 +1,27 @@
 {
   "messages": [
     {
-      "Id": "RkrQE04P",
-      "createdAt": "2021-04-09T11:06:54.894Z",
-      "userId": "CMgWhsB1",
-      "messageText": "Otpravim path",
-      "senderName": "Vikont",
-      "path": "/1"
+      "Id": "WGEfV7S3",
+      "createdAt": "2021-04-12T07:35:28.738Z",
+      "userId": "6UBM",
+      "messageText": "Hi",
+      "senderName": "Vik",
+      "path": "/meeting"
     },
     {
-      "Id": "DQIajWfT",
-      "createdAt": "2021-04-09T19:28:31.445Z",
-      "userId": "tSAS",
-      "messageText": "ffff",
-      "senderName": "Viki",
+      "Id": "8jgyiNCx",
+      "createdAt": "2021-04-12T07:35:34.681Z",
+      "userId": "NBTh",
+      "messageText": "Hi",
+      "senderName": "Peter",
+      "path": "/meeting"
+    },
+    {
+      "Id": "4dlgmF7u",
+      "createdAt": "2021-04-12T07:35:47.508Z",
+      "userId": "6UBM",
+      "messageText": "Lets try video chat",
+      "senderName": "Vik",
       "path": "/meeting"
     }
   ]
